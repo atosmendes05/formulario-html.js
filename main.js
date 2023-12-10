@@ -18,15 +18,19 @@ forme.addEventListener('submit',function(e){
     
 
     if (validaNumero(segundo.value,primeiro.value)){
-        const formcert = document.querySelector('.valido')
-        formcert.innerHTML = mensgemValida
-        formcert.style.display = 'block'
+        const certo = document.querySelector('.valido')
+        certo.innerHTML = mensgemValida
+        certo.style.display = 'block'
         
+ 
+        setTimeout(function() {
+            certo.style.display = 'none';
+        }, 1000);
+
 
         primeiro.value = ''
         segundo.value = ''
-
-
+    
     } else {
         const errado = document.querySelector('.invalido')
         errado.innerHTML = mensagemInval
@@ -34,7 +38,7 @@ forme.addEventListener('submit',function(e){
         
         setTimeout(function() {
             errado.style.display = 'none';
-        }, 3000);
+        }, 1000);
 
         primeiro.value = ''
         segundo.value = ''
