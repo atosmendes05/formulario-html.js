@@ -17,7 +17,7 @@ forme.addEventListener('submit',function(e){
     const mensagemInval =  `o formulario está Invalido` 
     
 
-    if (validaNumero(segundo.value,primeiro.value)){
+    if (validaNumero(parseFloat(segundo.value),parseFloat(primeiro.value))){
         const certo = document.querySelector('.valido')
         certo.innerHTML = mensgemValida
         certo.style.display = 'block'
